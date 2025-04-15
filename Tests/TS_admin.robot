@@ -3,29 +3,28 @@ Library             SeleniumLibrary
 Library             DateTime
 Library             Collections
 
-Test Setup          Ouvrir SeleniumEasy
-Test Teardown       Fermer SeleniumEasy
-
-Test Tags           admin
-
 *** Variables ***
-${URL}              https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-
+${URL}              https://opensource-demo.orangehrmlive.com
+${BROWSER}          chrome
+${USERNAME}         Admin
+${PASSWORD}         admin123
 
 *** Test Cases ***
 Test 01 Login
     [Tags]    admin_01
-    [Documentation]    ...    ${\n}Présentation Exercice
-    ...    ${\n}EXERCICE : Se connecter sur le site
-    ...    ${\n}Vérifier que le message de connexion est bien affiché
-    # Naviguer vers
-    # SeleniumLibrary.Click Element    //ul[@id='treemenu']//a[text()='Admin']
-    # SeleniumLibrary.Click Element    //ul[@id='treemenu']//a[text()='Login']
-    # CODE A IMPLEMENTER ICI
-    # Vérifier que le message de connexion est bien affiché
-    ${username}   set variable   Admin
-    ${password}   set variable   admin123
-    Input Text    id=sum1   ${username}
-    Input Text    id=sum2   ${password}
-    Click Element    xpath=//button[contains(.,"Get Total")]
-    Wait Until Element Contains   id=displayvalue   ${${sum1}+${sum2}}
+    [Documentation]    
+    ...    Présentation Exercice
+    ...    EXERCICE : Se connecter sur le site
+    ...    Vérifier que le message de connexion est bien affiché
+
+    Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
+    Wait Until Element Is Visible    name=username    10s
+    Input Text    name=username    ${USERNAME}
+    Input Text    name=password    ${PASSWORD}
+    Click Button    xpath=//button[@type='submit']
+
+    Wait Until Element Is Visible    xpath=//h6[text()='Dashboard']    10s
+    Element Should Be Visible       xpath=//h6[text()='Dashboard']
+
+    [Teardown]    Close Browser
