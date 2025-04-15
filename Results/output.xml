@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="UTF-8"?>
 <robot generator="Robot 7.2.2 (Python 3.10.11 on win32)" generated="2025-04-15T13:55:14.328437" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\mathi\OneDrive\Documents\Bachelor\TP_TESTMDS\Tests">
@@ -8240,3 +8241,237 @@ Vérifier que le cumul du nombre de ligne est égal à cet index</doc>
 <msg time="2025-04-15T13:55:55.372211" level="ERROR">When closing browser, received exception: Execution terminated by signal</msg>
 </errors>
 </robot>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.17 on darwin)" generated="2025-04-15T14:11:00.343582" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/mac/Desktop/B3dev/Qualité logicielle et tests/TP_TESTMDS/Tests">
+<suite id="s1-s1" name="TS EXO SELENIUM-EASY" source="/Users/mac/Desktop/B3dev/Qualité logicielle et tests/TP_TESTMDS/Tests/TS_EXO_SELENIUM-EASY.robot">
+<test id="s1-s1-t1" name="Test01 Selenium Menu Input Forms - Simple Form Demo - Two Input Fields" line="39">
+<kw name="Ouvrir SeleniumEasy" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-15T14:11:00.913414" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x10f7a31c0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-15T14:11:00.912791" elapsed="0.000692"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-search-engine-choice-screen</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-15T14:11:00.914753" elapsed="0.000302"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-15T14:11:00.915248" elapsed="0.000249"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-04-15T14:11:00.915937" level="INFO">${excludeSwitches} = ['enable-automation', 'enable-logging', 'disable-popup-blocking']</msg>
+<var>${excludeSwitches}</var>
+<arg>enable-automation</arg>
+<arg>enable-logging</arg>
+<arg>disable-popup-blocking</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-04-15T14:11:00.915692" elapsed="0.000298"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>excludeSwitches</arg>
+<arg>${excludeSwitches}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-15T14:11:00.916186" elapsed="0.000284"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-15T14:11:00.917152" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8000/demo.seleniumeasy.com'.</msg>
+<msg time="2025-04-15T14:11:07.502055" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-15T14:11:07.502855" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=135.0.7049.85)
+Stacktrace:
+0   chromedriver                        0x000000011007b498 chromedriver + 6149272
+1   chromedriver                        0x0000000110072b5a chromedriver + 6114138
+2   chromedriver                        0x000000010fb03e80 chromedriver + 417408
+3   chromedriver                        0x000000010fafacfb chromedriver + 380155
+4   chromedriver                        0x000000010faeb268 chromedriver + 316008
+5   chromedriver                        0x000000010faecf4d chromedriver + 323405
+6   chromedriver                        0x000000010faeb5eb chromedriver + 316907
+7   chromedriver                        0x000000010faeb018 chromedriver + 315416
+8   chromedriver                        0x000000010faead11 chromedriver + 314641
+9   chromedriver                        0x000000010fae8bc6 chromedriver + 306118
+10  chromedriver                        0x000000010fae937a chromedriver + 308090
+11  chromedriver                        0x000000010fb07359 chromedriver + 430937
+12  chromedriver                        0x000000010fba36f5 chromedriver + 1070837
+13  chromedriver                        0x000000010fb7b792 chromedriver + 907154
+14  chromedriver                        0x000000010fba2aca chromedriver + 1067722
+15  chromedriver                        0x000000010fb7b563 chromedriver + 906595
+16  chromedriver                        0x000000010fb47955 chromedriver + 694613
+17  chromedriver                        0x000000010fb485b1 chromedriver + 697777
+18  chromedriver                        0x0000000110038f50 chromedriver + 5877584
+19  chromedriver                        0x000000011003ce41 chromedriver + 5893697
+20  chromedriver                        0x0000000110013394 chromedriver + 5723028
+21  chromedriver                        0x000000011003d85b chromedriver + 5896283
+22  chromedriver                        0x0000000110001b14 chromedriver + 5651220
+23  chromedriver                        0x0000000110060968 chromedriver + 6039912
+24  chromedriver                        0x0000000110060b30 chromedriver + 6040368
+25  chromedriver                        0x0000000110072721 chromedriver + 6113057
+26  libsystem_pthread.dylib             0x00007ff8189334e1 _pthread_start + 125
+27  libsystem_pthread.dylib             0x00007ff81892ef6b thread_start + 15
+</msg>
+<arg>${SELENIUM_EASY_URL}</arg>
+<arg>browser=chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-04-15T14:11:00.916705" elapsed="6.592952">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=135.0.7049.85)
+Stacktrace:
+0   chromedriver                        0x000000011007b498 chromedriver + 6149272
+1   chromedriver                        0x0000000110072b5a chromedriver + 6114138
+2   chromedriver                        0x000000010fb03e80 chromedriver + 417408
+3   chromedriver                        0x000000010fafacfb chromedriver + 380155
+4   chromedriver                        0x000000010faeb268 chromedriver + 316008
+5   chromedriver                        0x000000010faecf4d chromedriver + 323405
+6   chromedriver                        0x000000010faeb5eb chromedriver + 316907
+7   chromedriver                        0x000000010faeb018 chromedriver + 315416
+8   chromedriver                        0x000000010faead11 chromedriver + 3...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x000000010fb485b1 chromedriver + 697777
+18  chromedriver                        0x0000000110038f50 chromedriver + 5877584
+19  chromedriver                        0x000000011003ce41 chromedriver + 5893697
+20  chromedriver                        0x0000000110013394 chromedriver + 5723028
+21  chromedriver                        0x000000011003d85b chromedriver + 5896283
+22  chromedriver                        0x0000000110001b14 chromedriver + 5651220
+23  chromedriver                        0x0000000110060968 chromedriver + 6039912
+24  chromedriver                        0x0000000110060b30 chromedriver + 6040368
+25  chromedriver                        0x0000000110072721 chromedriver + 6113057
+26  libsystem_pthread.dylib             0x00007ff8189334e1 _pthread_start + 125
+27  libsystem_pthread.dylib             0x00007ff81892ef6b thread_start + 15</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-04-15T14:11:07.510579" elapsed="0.000148"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2025-04-15T14:11:07.510991" elapsed="0.000066"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" start="2025-04-15T14:11:07.511310" elapsed="0.000066"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Selenium Easy</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-04-15T14:11:07.512267" elapsed="0.000113"/>
+</kw>
+<doc>Ouverture de Chrome à l'adresse http://localhost:8000/demo.seleniumeasy.com</doc>
+<status status="FAIL" start="2025-04-15T14:11:00.911285" elapsed="6.601578">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=135.0.7049.85)
+Stacktrace:
+0   chromedriver                        0x000000011007b498 chromedriver + 6149272
+1   chromedriver                        0x0000000110072b5a chromedriver + 6114138
+2   chromedriver                        0x000000010fb03e80 chromedriver + 417408
+3   chromedriver                        0x000000010fafacfb chromedriver + 380155
+4   chromedriver                        0x000000010faeb268 chromedriver + 316008
+5   chromedriver                        0x000000010faecf4d chromedriver + 323405
+6   chromedriver                        0x000000010faeb5eb chromedriver + 316907
+7   chromedriver                        0x000000010faeb018 chromedriver + 315416
+8   chromedriver                        0x000000010faead11 chromedriver + 3...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x000000010fb485b1 chromedriver + 697777
+18  chromedriver                        0x0000000110038f50 chromedriver + 5877584
+19  chromedriver                        0x000000011003ce41 chromedriver + 5893697
+20  chromedriver                        0x0000000110013394 chromedriver + 5723028
+21  chromedriver                        0x000000011003d85b chromedriver + 5896283
+22  chromedriver                        0x0000000110001b14 chromedriver + 5651220
+23  chromedriver                        0x0000000110060968 chromedriver + 6039912
+24  chromedriver                        0x0000000110060b30 chromedriver + 6040368
+25  chromedriver                        0x0000000110072721 chromedriver + 6113057
+26  libsystem_pthread.dylib             0x00007ff8189334e1 _pthread_start + 125
+27  libsystem_pthread.dylib             0x00007ff81892ef6b thread_start + 15</status>
+</kw>
+<kw name="Fermer SeleniumEasy" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-15T14:11:07.617434" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-15T14:11:07.514542" elapsed="0.103093"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-15T14:11:07.617900" elapsed="0.246027"/>
+</kw>
+<doc>Fermeture du navigateur
+On laisse un peu de temps pour visualiser l'écran final</doc>
+<status status="PASS" start="2025-04-15T14:11:07.513805" elapsed="0.350338"/>
+</kw>
+<doc>...    
+Présentation Exercice
+/basic-first-form-demo.html
+
+EXERCICE : Manipulation du formulaire
+
+Saisir le nombre 1
+
+Saisir le nombre 2
+
+Cliquer sur la somme
+
+Récupérer le résultat
+
+Vérifier le résultat</doc>
+<tag>selenium_01</tag>
+<tag>tnr</tag>
+<status status="FAIL" start="2025-04-15T14:11:00.908669" elapsed="6.955670">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=135.0.7049.85)
+Stacktrace:
+0   chromedriver                        0x000000011007b498 chromedriver + 6149272
+1   chromedriver                        0x0000000110072b5a chromedriver + 6114138
+2   chromedriver                        0x000000010fb03e80 chromedriver + 417408
+3   chromedriver                        0x000000010fafacfb chromedriver + 380155
+4   chromedriver                        0x000000010faeb268 chromedriver + 316008
+5   chromedriver                        0x000000010faecf4d chromedriver + 323405
+6   chromedriver                        0x000000010faeb5eb chromedriver + 316907
+7   chromedriver                        0x000000010faeb018 chromedriver + 315416
+8   chromedriver                        0x000000010faead11 chromedriver + 3...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x000000010fb485b1 chromedriver + 697777
+18  chromedriver                        0x0000000110038f50 chromedriver + 5877584
+19  chromedriver                        0x000000011003ce41 chromedriver + 5893697
+20  chromedriver                        0x0000000110013394 chromedriver + 5723028
+21  chromedriver                        0x000000011003d85b chromedriver + 5896283
+22  chromedriver                        0x0000000110001b14 chromedriver + 5651220
+23  chromedriver                        0x0000000110060968 chromedriver + 6039912
+24  chromedriver                        0x0000000110060b30 chromedriver + 6040368
+25  chromedriver                        0x0000000110072721 chromedriver + 6113057
+26  libsystem_pthread.dylib             0x00007ff8189334e1 _pthread_start + 125
+27  libsystem_pthread.dylib             0x00007ff81892ef6b thread_start + 15</status>
+</test>
+<status status="FAIL" start="2025-04-15T14:11:00.406301" elapsed="7.461816"/>
+</suite>
+<status status="FAIL" start="2025-04-15T14:11:00.346415" elapsed="7.524437"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">selenium_01</stat>
+<stat pass="0" fail="1" skip="0">tnr</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="TS EXO SELENIUM-EASY" id="s1-s1" pass="0" fail="1" skip="0">Tests.TS EXO SELENIUM-EASY</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
+>>>>>>> Stashed changes
