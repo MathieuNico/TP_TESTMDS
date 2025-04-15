@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.11 on win32)" generated="2025-04-01T15:10:22.918186" rpa="false" schemaversion="5">
+<suite id="s1" name="TS TODO" source="C:\Users\mathi\OneDrive\Documents\Bachelor\BeginnersGuide\Tests\TS_TODO.robot">
+<test id="s1-t1" name="Scenario TODO" line="20">
+<kw name="Launch Todo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:23.274384" level="INFO">Opening browser 'chrome' to base url 'https://todomvc.com/examples/angular/dist/browser/#/all'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-01T15:10:23.274384" elapsed="2.383243"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-01T15:10:25.659124" elapsed="0.037719"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>angular</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-04-01T15:10:25.697883" elapsed="0.006054"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${LOCATOR_TITLE}</arg>
+<arg>Todos</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-04-01T15:10:25.703937" elapsed="0.029541"/>
+</kw>
+<status status="PASS" start="2025-04-01T15:10:23.272720" elapsed="2.460758"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:25.880247" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="step01-initial.png"&gt;&lt;img src="step01-initial.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT_DIR}/step01-initial.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-01T15:10:25.734620" elapsed="0.145627"/>
+</kw>
+<kw name="Add Todo">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:25.881247" level="INFO">Typing text 'SELENIUM' into text field 'css:input.new-todo'.</msg>
+<arg>${LOCATOR_INPUT_NEWTODO}</arg>
+<arg>${todo_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-01T15:10:25.881247" elapsed="0.088732"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:25.971038" level="INFO">Sending key(s) ('RETURN',) to css:input.new-todo element.</msg>
+<msg time="2025-04-01T15:10:26.262591" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-04-01T15:10:26.262591" level="INFO">Releasing special key RETURN.</msg>
+<arg>${LOCATOR_INPUT_NEWTODO}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-01T15:10:25.969979" elapsed="0.323544"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${todo_name}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-01T15:10:26.293523" elapsed="0.011987"/>
+</kw>
+<arg>SELENIUM</arg>
+<status status="PASS" start="2025-04-01T15:10:25.880247" elapsed="0.425263"/>
+</kw>
+<kw name="Add Todo">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:26.306993" level="INFO">Typing text 'APPIUM' into text field 'css:input.new-todo'.</msg>
+<arg>${LOCATOR_INPUT_NEWTODO}</arg>
+<arg>${todo_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-01T15:10:26.305510" elapsed="0.056680"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:26.363216" level="INFO">Sending key(s) ('RETURN',) to css:input.new-todo element.</msg>
+<msg time="2025-04-01T15:10:26.646735" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-04-01T15:10:26.646735" level="INFO">Releasing special key RETURN.</msg>
+<arg>${LOCATOR_INPUT_NEWTODO}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-01T15:10:26.363216" elapsed="0.290425"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${todo_name}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-01T15:10:26.654651" elapsed="0.010831"/>
+</kw>
+<arg>APPIUM</arg>
+<status status="PASS" start="2025-04-01T15:10:26.305510" elapsed="0.359972"/>
+</kw>
+<kw name="Add Todo">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:26.666492" level="INFO">Typing text 'PYTHON' into text field 'css:input.new-todo'.</msg>
+<arg>${LOCATOR_INPUT_NEWTODO}</arg>
+<arg>${todo_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-01T15:10:26.666492" elapsed="0.055262"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:26.722821" level="INFO">Sending key(s) ('RETURN',) to css:input.new-todo element.</msg>
+<msg time="2025-04-01T15:10:27.004922" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-04-01T15:10:27.004922" level="INFO">Releasing special key RETURN.</msg>
+<arg>${LOCATOR_INPUT_NEWTODO}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-01T15:10:26.721754" elapsed="0.290493"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${todo_name}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-01T15:10:27.012247" elapsed="0.011660"/>
+</kw>
+<arg>PYTHON</arg>
+<status status="PASS" start="2025-04-01T15:10:26.665482" elapsed="0.358425"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:27.126651" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="step02-addTodo.png"&gt;&lt;img src="step02-addTodo.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT_DIR}/step02-addTodo.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-01T15:10:27.025338" elapsed="0.101313"/>
+</kw>
+<kw name="Complete Todo">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:27.128136" level="INFO">Clicking element 'xpath=//label[text()='APPIUM']/../input[@type='checkbox']'.</msg>
+<arg>xpath=//label[text()='${todo_name}']/../input[@type='checkbox']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-01T15:10:27.128136" elapsed="0.060872"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-01T15:10:28.209596" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-01T15:10:27.189008" elapsed="1.020588"/>
+</kw>
+<arg>APPIUM</arg>
+<status status="PASS" start="2025-04-01T15:10:27.128136" elapsed="1.081460"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:28.902123" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="step03-completeTodo.png"&gt;&lt;img src="step03-completeTodo.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT_DIR}/step03-completeTodo.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-01T15:10:28.210668" elapsed="0.691455"/>
+</kw>
+<kw name="Clear Completed">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:28.904134" level="INFO">Clicking button 'css:button.clear-completed'.</msg>
+<arg>${LOCATOR_BUTTON_CLEAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-01T15:10:28.903132" elapsed="0.070403"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-01T15:10:29.988455" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-01T15:10:28.973535" elapsed="1.014920"/>
+</kw>
+<status status="PASS" start="2025-04-01T15:10:28.903132" elapsed="1.085323"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:30.083625" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="step04-clearTodo.png"&gt;&lt;img src="step04-clearTodo.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT_DIR}/step04-clearTodo.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-01T15:10:29.989471" elapsed="0.094154"/>
+</kw>
+<kw name="Delete Todo">
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:30.084710" level="INFO">Simulating Mouse Over on element 'xpath=//label[text()='PYTHON']'.</msg>
+<arg>xpath=//label[text()='${todo_name}']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-04-01T15:10:30.084710" elapsed="0.278295"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:30.364400" level="INFO">Clicking element 'xpath=//label[text()='PYTHON']/following-sibling::button'.</msg>
+<arg>xpath=//label[text()='${todo_name}']/following-sibling::button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-01T15:10:30.364400" elapsed="0.046773"/>
+</kw>
+<arg>PYTHON</arg>
+<status status="PASS" start="2025-04-01T15:10:30.084710" elapsed="0.326463"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:30.513132" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="step05-deleteTodo.png"&gt;&lt;img src="step05-deleteTodo.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT_DIR}/step05-deleteTodo.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-01T15:10:30.412670" elapsed="0.100462"/>
+</kw>
+<kw name="Verify Todo Exists">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:30.523701" level="INFO">Current page contains element 'xpath=//label[text()='SELENIUM']'.</msg>
+<arg>xpath=//label[text()='${todo_name}']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-04-01T15:10:30.514139" elapsed="0.009562"/>
+</kw>
+<arg>SELENIUM</arg>
+<status status="PASS" start="2025-04-01T15:10:30.514139" elapsed="0.009562"/>
+</kw>
+<kw name="Verify Todo Not Exists">
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:30.533856" level="INFO">Current page does not contain element 'xpath=//label[text()='APPIUM']'.</msg>
+<arg>xpath=//label[text()='${todo_name}']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-04-01T15:10:30.525221" elapsed="0.008635"/>
+</kw>
+<arg>APPIUM</arg>
+<status status="PASS" start="2025-04-01T15:10:30.524715" elapsed="0.010158"/>
+</kw>
+<kw name="Verify Todo Not Exists">
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-04-01T15:10:30.540930" level="INFO">Current page does not contain element 'xpath=//label[text()='PYTHON']'.</msg>
+<arg>xpath=//label[text()='${todo_name}']</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-04-01T15:10:30.534873" elapsed="0.006057"/>
+</kw>
+<arg>PYTHON</arg>
+<status status="PASS" start="2025-04-01T15:10:30.534873" elapsed="0.007112"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-01T15:10:30.542490" elapsed="2.137436"/>
+</kw>
+<doc>0) Exercices sur le site angular
+1) Ajout de 3 todos
+2) Traitement d'une tâche
+3) Suppression d'une tâche
+4) Contrôle supplémentaire</doc>
+<tag>tnr</tag>
+<status status="PASS" start="2025-04-01T15:10:23.271238" elapsed="9.408688"/>
+</test>
+<status status="PASS" start="2025-04-01T15:10:22.921025" elapsed="9.760590"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">tnr</stat>
+</tag>
+<suite>
+<stat name="TS TODO" id="s1" pass="1" fail="0" skip="0">TS TODO</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

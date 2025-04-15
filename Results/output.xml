@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.11 on win32)" generated="2025-04-01T11:25:56.499727" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\mathi\OneDrive\Documents\Bachelor\BeginnersGuide\Tests">
+<suite id="s1-s1" name="TS EXO SELENIUM-EASY" source="C:\Users\mathi\OneDrive\Documents\Bachelor\BeginnersGuide\Tests\TS_EXO_SELENIUM-EASY.robot">
+<test id="s1-s1-t1" name="Test00 Selenium Menu Input Forms - Simple Form Demo - Single Input Field" line="17">
+<kw name="Ouvrir SeleniumEasy" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-01T11:25:57.142599" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001E101157EE0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-01T11:25:57.142599" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-search-engine-choice-screen</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-01T11:25:57.142599" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-01T11:25:57.143796" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-04-01T11:25:57.143796" level="INFO">${excludeSwitches} = ['enable-automation', 'enable-logging', 'disable-popup-blocking']</msg>
+<var>${excludeSwitches}</var>
+<arg>enable-automation</arg>
+<arg>enable-logging</arg>
+<arg>disable-popup-blocking</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-04-01T11:25:57.143796" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_experimental_option</arg>
+<arg>excludeSwitches</arg>
+<arg>${excludeSwitches}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-04-01T11:25:57.143796" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-01T11:25:57.145142" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8000/demo.seleniumeasy.com'.</msg>
+<msg time="2025-04-01T11:26:09.598940" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-01T11:26:09.598940" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=134.0.6998.178)
+Stacktrace:
+	GetHandleVerifier [0x00007FF756504C25+3179557]
+	(No symbol) [0x00007FF7561688A0]
+	(No symbol) [0x00007FF755FF91CA]
+	(No symbol) [0x00007FF755FF5B57]
+	(No symbol) [0x00007FF755FE68E9]
+	(No symbol) [0x00007FF755FE8658]
+	(No symbol) [0x00007FF755FE6BF6]
+	(No symbol) [0x00007FF755FE6676]
+	(No symbol) [0x00007FF755FE633A]
+	(No symbol) [0x00007FF755FE3EC2]
+	(No symbol) [0x00007FF755FE47AC]
+	(No symbol) [0x00007FF755FFD01A]
+	(No symbol) [0x00007FF7560A11AE]
+	(No symbol) [0x00007FF756077C2A]
+	(No symbol) [0x00007FF7560A02F3]
+	(No symbol) [0x00007FF756077A03]
+	(No symbol) [0x00007FF7560406D0]
+	(No symbol) [0x00007FF756041983]
+	GetHandleVerifier [0x00007FF7565667CD+3579853]
+	GetHandleVerifier [0x00007FF75657D1D2+3672530]
+	GetHandleVerifier [0x00007FF756572153+3627347]
+	GetHandleVerifier [0x00007FF7562D092A+868650]
+	(No symbol) [0x00007FF756172FFF]
+	(No symbol) [0x00007FF75616F4A4]
+	(No symbol) [0x00007FF75616F646]
+	(No symbol) [0x00007FF75615EAA9]
+	BaseThreadInitThunk [0x00007FF8706B259D+29]
+	RtlUserThreadStart [0x00007FF87168AF38+40]
+</msg>
+<arg>${SELENIUM_EASY_URL}</arg>
+<arg>browser=chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-04-01T11:25:57.143796" elapsed="12.457665">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=134.0.6998.178)
+Stacktrace:
+	GetHandleVerifier [0x00007FF756504C25+3179557]
+	(No symbol) [0x00007FF7561688A0]
+	(No symbol) [0x00007FF755FF91CA]
+	(No symbol) [0x00007FF755FF5B57]
+	(No symbol) [0x00007FF755FE68E9]
+	(No symbol) [0x00007FF755FE8658]
+	(No symbol) [0x00007FF755FE6BF6]
+	(No symbol) [0x00007FF755FE6676]
+	(No symbol) [0x00007FF755FE633A]
+	(No symbol) [0x00007FF755FE3EC2]
+	(No symbol) [0x00007FF755FE47AC]
+	(No symbol) [0x00007FF755FFD01A]
+	(No symbol) [0x00007FF7560A11AE]
+	(No symbol) [0x00007FF756077C2A]
+	(No symbol) [0x00007FF7560A02F3]
+	(No symbol) [0x00007FF756077A03]
+	(No symbol) [0x00007FF7560406D0]
+	(No symbol) [0x00007FF756041983]
+	GetHandleVerifier [0x00007FF7565667CD+3579853]
+	GetHandleVerifier [0x00007FF75657D1D2+3672530]
+	GetHandleVerifier [0x00007FF756572153+3627347]
+	GetHandleVerifier [0x00007FF7562D092A+868650]
+	(No symbol) [0x00007FF756172FFF]
+	(No symbol) [0x00007FF75616F4A4]
+	(No symbol) [0x00007FF75616F646]
+	(No symbol) [0x00007FF75615EAA9]
+	BaseThreadInitThunk [0x00007FF8706B259D+29]
+	RtlUserThreadStart [0x00007FF87168AF38+40]
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-04-01T11:26:09.601461" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2025-04-01T11:26:09.602460" elapsed="0.000000"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" start="2025-04-01T11:26:09.602460" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Selenium Easy</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-04-01T11:26:09.602460" elapsed="0.000000"/>
+</kw>
+<doc>Ouverture de Chrome à l'adresse http://localhost:8000/demo.seleniumeasy.com</doc>
+<status status="FAIL" start="2025-04-01T11:25:57.141426" elapsed="12.461034">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=134.0.6998.178)
+Stacktrace:
+	GetHandleVerifier [0x00007FF756504C25+3179557]
+	(No symbol) [0x00007FF7561688A0]
+	(No symbol) [0x00007FF755FF91CA]
+	(No symbol) [0x00007FF755FF5B57]
+	(No symbol) [0x00007FF755FE68E9]
+	(No symbol) [0x00007FF755FE8658]
+	(No symbol) [0x00007FF755FE6BF6]
+	(No symbol) [0x00007FF755FE6676]
+	(No symbol) [0x00007FF755FE633A]
+	(No symbol) [0x00007FF755FE3EC2]
+	(No symbol) [0x00007FF755FE47AC]
+	(No symbol) [0x00007FF755FFD01A]
+	(No symbol) [0x00007FF7560A11AE]
+	(No symbol) [0x00007FF756077C2A]
+	(No symbol) [0x00007FF7560A02F3]
+	(No symbol) [0x00007FF756077A03]
+	(No symbol) [0x00007FF7560406D0]
+	(No symbol) [0x00007FF756041983]
+	GetHandleVerifier [0x00007FF7565667CD+3579853]
+	GetHandleVerifier [0x00007FF75657D1D2+3672530]
+	GetHandleVerifier [0x00007FF756572153+3627347]
+	GetHandleVerifier [0x00007FF7562D092A+868650]
+	(No symbol) [0x00007FF756172FFF]
+	(No symbol) [0x00007FF75616F4A4]
+	(No symbol) [0x00007FF75616F646]
+	(No symbol) [0x00007FF75615EAA9]
+	BaseThreadInitThunk [0x00007FF8706B259D+29]
+	RtlUserThreadStart [0x00007FF87168AF38+40]
+</status>
+</kw>
+<kw name="Fermer SeleniumEasy" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-01T11:26:09.714854" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-01T11:26:09.603460" elapsed="0.111394"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-01T11:26:09.715848" elapsed="2.146654"/>
+</kw>
+<doc>Fermeture du navigateur
+On laisse un peu de temps pour visualiser l'écran final</doc>
+<status status="PASS" start="2025-04-01T11:26:09.603460" elapsed="2.259042"/>
+</kw>
+<doc>...    
+Présentation Exercice
+/basic-first-form-demo.html
+
+EXERCICE : saisir le message Hello dans le champ text
+Cliquer sur le bouton show message
+vérifier que le message qui s'affiche est bien celui attendu
+Bonus : Remplacez HELLO par la variable d'environnement USERNAME</doc>
+<tag>selenium_00</tag>
+<tag>tnr</tag>
+<status status="FAIL" start="2025-04-01T11:25:57.139023" elapsed="14.723479">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=134.0.6998.178)
+Stacktrace:
+	GetHandleVerifier [0x00007FF756504C25+3179557]
+	(No symbol) [0x00007FF7561688A0]
+	(No symbol) [0x00007FF755FF91CA]
+	(No symbol) [0x00007FF755FF5B57]
+	(No symbol) [0x00007FF755FE68E9]
+	(No symbol) [0x00007FF755FE8658]
+	(No symbol) [0x00007FF755FE6BF6]
+	(No symbol) [0x00007FF755FE6676]
+	(No symbol) [0x00007FF755FE633A]
+	(No symbol) [0x00007FF755FE3EC2]
+	(No symbol) [0x00007FF755FE47AC]
+	(No symbol) [0x00007FF755FFD01A]
+	(No symbol) [0x00007FF7560A11AE]
+	(No symbol) [0x00007FF756077C2A]
+	(No symbol) [0x00007FF7560A02F3]
+	(No symbol) [0x00007FF756077A03]
+	(No symbol) [0x00007FF7560406D0]
+	(No symbol) [0x00007FF756041983]
+	GetHandleVerifier [0x00007FF7565667CD+3579853]
+	GetHandleVerifier [0x00007FF75657D1D2+3672530]
+	GetHandleVerifier [0x00007FF756572153+3627347]
+	GetHandleVerifier [0x00007FF7562D092A+868650]
+	(No symbol) [0x00007FF756172FFF]
+	(No symbol) [0x00007FF75616F4A4]
+	(No symbol) [0x00007FF75616F646]
+	(No symbol) [0x00007FF75615EAA9]
+	BaseThreadInitThunk [0x00007FF8706B259D+29]
+	RtlUserThreadStart [0x00007FF87168AF38+40]
+</status>
+</test>
+<status status="FAIL" start="2025-04-01T11:25:56.543880" elapsed="15.324681"/>
+</suite>
+<status status="FAIL" start="2025-04-01T11:25:56.502216" elapsed="15.370304"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">selenium_00</stat>
+<stat pass="0" fail="1" skip="0">tnr</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="TS EXO SELENIUM-EASY" id="s1-s1" pass="0" fail="1" skip="0">Tests.TS EXO SELENIUM-EASY</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
