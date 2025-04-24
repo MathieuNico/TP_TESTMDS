@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 7.2.2 (Python 3.10.11 on win32)" generated="2025-04-15T16:55:02.349218" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\mathi\OneDrive\Documents\Bachelor\TP_TESTMDS\Tests">
 <suite id="s1-s1" name="TS ADDUSER" source="C:\Users\mathi\OneDrive\Documents\Bachelor\TP_TESTMDS\Tests\TS_ADDUSER.robot">
@@ -200,17 +201,191 @@
 <status status="PASS" start="2025-04-15T16:55:02.385218" elapsed="16.667238"/>
 </suite>
 <status status="PASS" start="2025-04-15T16:55:02.352218" elapsed="16.701951"/>
+=======
+<robot generator="Robot 7.2.2 (Python 3.10.17 on darwin)" generated="2025-04-23T22:35:19.820925" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/mac/Desktop/B3dev/Qualité logicielle et tests/TP_TESTMDS/Tests">
+<suite id="s1-s1" name="TS admin" source="/Users/mac/Desktop/B3dev/Qualité logicielle et tests/TP_TESTMDS/Tests/TS_admin.robot">
+<test id="s1-s1-t1" name="Test 02 Add Admin" line="48">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:20.518523" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-23T22:35:20.518027" elapsed="7.544701"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-23T22:35:28.063946" elapsed="0.591649"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-23T22:35:28.656367" elapsed="0.083205"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:28.743748" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:28.743122" elapsed="0.188144"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:28.933284" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:28.932212" elapsed="0.135005"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:29.069007" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:29.068631" elapsed="0.141760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//h6[text()='Dashboard']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-23T22:35:29.215684" elapsed="1.129038"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:30.401317" level="INFO">Element 'xpath=//h6[text()='Dashboard']' is displayed.</msg>
+<arg>xpath=//h6[text()='Dashboard']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-23T22:35:30.345087" elapsed="0.056403"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:30.402245" level="INFO">Clicking element 'xpath=//span[text()='PIM']'.</msg>
+<arg>xpath=//span[text()='PIM']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:30.401864" elapsed="0.909108"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@class,'oxd-button') and contains(.,'Add')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-23T22:35:31.311384" elapsed="0.506827"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:31.819647" level="INFO">Clicking button 'xpath=//button[contains(@class,'oxd-button') and contains(.,'Add')]'.</msg>
+<arg>xpath=//button[contains(@class,'oxd-button') and contains(.,'Add')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:31.819121" elapsed="0.653079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-23T22:35:32.472913" elapsed="0.384316"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:32.858449" level="INFO">Typing text 'Tom' into text field 'name=firstName'.</msg>
+<arg>name=firstName</arg>
+<arg>${FIRSTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:32.857694" elapsed="0.149963"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:33.009006" level="INFO">Typing text 'Greg' into text field 'name=middleName'.</msg>
+<arg>name=middleName</arg>
+<arg>${MIDDLENAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:33.008356" elapsed="0.137396"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:33.147681" level="INFO">Typing text 'Poitier' into text field 'name=lastName'.</msg>
+<arg>name=lastName</arg>
+<arg>${LASTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:33.147188" elapsed="0.117889"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Save']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-23T22:35:33.268068" elapsed="0.028239"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:33.297551" level="INFO">Clicking button 'xpath=//button[normalize-space()='Save']'.</msg>
+<arg>xpath=//button[normalize-space()='Save']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:33.296797" elapsed="0.106278"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-23T22:35:43.405251" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-23T22:35:33.404469" elapsed="10.000965"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:43.552719" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-55.png"&gt;&lt;img src="selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-23T22:35:43.405797" elapsed="0.147097"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:43.554813" level="INFO">Clicking element 'xpath=//span[contains(@class, 'oxd-userdropdown-tab')]'.</msg>
+<arg>xpath=//span[contains(@class, 'oxd-userdropdown-tab')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:43.554034" elapsed="0.080419"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(@href, 'logout')]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-23T22:35:43.635947" elapsed="0.299881"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:35:43.936596" level="INFO">Clicking element 'xpath=//a[contains(@href, 'logout')]'.</msg>
+<arg>xpath=//a[contains(@href, 'logout')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-23T22:35:43.936212" elapsed="0.534072"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-23T22:35:54.474192" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-23T22:35:44.470734" elapsed="10.003628"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-23T22:35:54.474921" elapsed="0.237078"/>
+</kw>
+<doc>Présentation Exercice
+EXERCICE : Créer un admin
+Étapes :
+- Connexion à l'application
+- Navigation vers le menu PIM
+- Ajout d'un nouvel utilisateur avec nom et prénom
+- Vérification que l'ajout est réussi</doc>
+<tag>admin</tag>
+<tag>admin02</tag>
+<status status="PASS" start="2025-04-23T22:35:20.514646" elapsed="34.201455"/>
+</test>
+<status status="PASS" start="2025-04-23T22:35:19.886420" elapsed="34.837374"/>
+</suite>
+<status status="PASS" start="2025-04-23T22:35:19.823854" elapsed="34.903610"/>
+>>>>>>> 4d294c14995173403126beb964ec54a85dad058e
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<<<<<<< HEAD
 <stat pass="1" fail="0" skip="0">AddUser</stat>
 </tag>
 <suite>
 <stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
 <stat name="TS ADDUSER" id="s1-s1" pass="1" fail="0" skip="0">Tests.TS ADDUSER</stat>
+=======
+<stat pass="1" fail="0" skip="0">admin</stat>
+<stat pass="1" fail="0" skip="0">admin02</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="TS admin" id="s1-s1" pass="1" fail="0" skip="0">Tests.TS admin</stat>
+>>>>>>> 4d294c14995173403126beb964ec54a85dad058e
 </suite>
 </statistics>
 <errors>
